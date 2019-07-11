@@ -1,5 +1,7 @@
 # Frankdevhub Business
 frankdevhub bussiness plan 2019
+- 养兵千日用兵一时
+- [www.meixiangtech.site](http://www.meixiangtech.site)
 
 # Start with a plan
 - Born from Infosys and Fujisu.

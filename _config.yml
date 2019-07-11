@@ -2,11 +2,11 @@
 title: 上海美襄信息科技有限公司
 brief-intro: J2EE Server Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://frankdevhub-business.github.io" # the base hostname & protocol for your site
+url: "https://frankdevhub.github.io" # the base hostname & protocol for your site
 
 # other links
-github_username:  frankdevhub-business
-email: frankdevhub.business@gmail.com
+github_username:  frankdevhub
+email: frankdevhub@gmailcom
 
 
 # Build settings

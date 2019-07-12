@@ -77,14 +77,72 @@ Stylesheet Guide
 13. Media Queries
 
  */
-
+/* ---------------------------------------------------------------------- */
+/*	WeChat
+/* ---------------------------------------------------------------------- */
+.wechat{
+     background-image: url(../images/icons/wechat.png);
+}
+/* ---------------------------------------------------------------------- */
+/*	Partner
+/* ---------------------------------------------------------------------- */
+.w3layouts-partners h3 {
+    color: #0099e5;
+    font-size: 40px;
+    margin-bottom: 27px;
+	margin-top: 60px;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+}
+* {
+    box-sizing: border-box;
+}
+h3 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+body {
+    padding: 0;
+    background: #fff;
+}
+.partner-img{
+	float:left
+}
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.w3layouts-partners h3:after, .w3layouts-partners h3:before {
+    width: 170px;
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    background: #000;
+    margin: 0 1%;
+}
+:after, :before {
+    box-sizing: border-box;
+}
+.container{
+	margin-top:27px;
+}
 /* ---------------------------------------------------------------------- */
 /*	Reset
 /* ---------------------------------------------------------------------- */
 	
 li.article-square {list-style-type:square}
 
-	
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,

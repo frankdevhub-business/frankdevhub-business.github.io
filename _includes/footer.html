@@ -1,7 +1,35 @@
 <!-- - - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->	
-	
+	{% if page.url == '/' %}
+	<div class="row main-container" style="margin-bottom:60px;">
+				<!--partners-->
+				  <div class="w3layouts-partners">
+					<h3 class="partners-title" style="line-height:0.25px;color:#337ab7">Our Partners</h3>
+					<h4 class="partners-title" style="text-align:center;font-size:21px;line-height:0.25px;color:#337ab7">合作伙伴</h4>
+						<div class="container">
+							<div>
+								<div class="partner-img" style="align:center">
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block" src="/images/partners/huawei.png" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block" src="/images/partners/aliyun.png" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block;width:176px;height:76px;" src="/images/partners/chinatelecom.jpg" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block" src="/images/partners/ibm.png" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block;width:176px;height:76px;" src="/images/partners/fujitsu.jpg" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block" src="/images/partners/lenovo.png" alt=""></a>
+								</div>
+								<div style="clear:both"></div>
+								<div>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block" src="/images/partners/dell.png" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block;width:176px;height:76px;" src="/images/partners/infosys.jpg" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block;width:176px;height:76px;" src="/images/partners/sihuatech.jpg" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block;width:176px;height:76px;" src="/images/partners/microsoft.jpg" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block;width:176px;height:76px;" src="/images/partners/cisco.jpg" alt=""></a>
+								  <a href="#" class="partner-img" ><img class="img-responsive" style="display:block;width:176px;height:76px;" src="/images/partners/ocn.jpg" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+	</div>	
+	{% endif %}
 	<footer id="footer" class="clearfix">
-		
 		<div class="row">
 			
 			<div class="threecol">
@@ -127,8 +155,7 @@
 					<h3 class="widget-title">Follow Us</h3>
 					
 					<ul class="social-icons clearfix">
-						<li class="facebook"><a href="#">Facebook<span></span></a></li>
-						<li class="wechat"><a href="#">WeChat<span></span></a></li>
+						<li><i class="icon-comments"></i></li>
 						<li class="rss"><a href="#">Rss <span></span></a></li>
 					</ul><!--/ .social-icons-->
 					

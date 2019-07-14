@@ -1,8 +1,6 @@
 # Site settings
 title: 上海美襄信息科技有限公司
-brief-intro: J2EE Server Engineer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://frankdevhub.github.io" # the base hostname & protocol for your site
+baseurl: "" 
 
 # other links
 github_username:  frankdevhub
@@ -18,12 +16,6 @@ kramdown:
 
 # port
 # port: 4000
-
-# url
-faq_dir: faq/
-contact_dir: contact/
-introduction_dir: introduction/
-
 
 # excerpt
 excerpt_separator: "\n\n\n\n"

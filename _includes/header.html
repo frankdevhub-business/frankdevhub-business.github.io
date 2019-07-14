@@ -16,34 +16,32 @@
             </li>
 		
 		    <li>
-			<a href="/about">About</a>
+			<a href="/produts&service">Products&nbsp; &amp; &nbsp;Service</a>
 				<ul>
-					<li><a href="/services">Services</a></li>
-					<li><a href="#">Third Level</a>
+					<li><a href="/services">定制化企业ERP系统</a></li>
+					<li><a href="/services">互联网电商平台</a></li>
+					<li><a href="/services">自动化运营平台</a></li>
+					<li><a href="/services">定制化软件研发外包</a></li>
+				</ul>				
+		    </li>	
+			<li>
+			<a href="/solutions">Solutions</a>
+				<ul>
+					<li><a href="#">场景解决方案</a>
 						<ul>
-						   <li><a href="#">In the Third Level</a></li>
-						   <li><a href="#">In the Third Level</a></li>
-						   <li><a href="#">In the Third Level</a></li>
+						   <li><a href="/solutions/solutions-zianquanfenzhi">自安全分支机构解决方案</a></li>
+						   <li><a href="/solutions/solutions-zianquanyuanqu">自安全园区网解决方案</a></li>
+						   <li><a href="/solutions/solutions-zianquanwulian">自安全物联感知网解决方案</a></li>
 						</ul>
 					</li>
 				</ul>				
-		    </li>			   
-		
-		
-		
-		{% for my_page in site.pages %}
-            {% if my_page.type == 'page' and  my_page.categories != "About" %}
-					{% if my_page.url == page.url %}
-						<li class="current-menu-item">	
-                    {% else %}
-						<li>
-					{% endif %}
-							<a href="{{ my_page.url | prepend: site.baseurl }}">
-							  {{ my_page.categories }}
-							</a>
-						</li> 		
-		    {% endif %} 	
-         {% endfor %}
+		    </li>
+			<li>
+			<a href="/Contact">Contact</a>
+		    </li>
+			<li>
+			<a href="/News">News</a>
+		    </li>
 		</ul>
 		
 		<div class="widget_social clearfix">

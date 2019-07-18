@@ -263,11 +263,7 @@ jQuery(document).ready(function($){
 
 		if($('#map').length) {
 			$('#map').gMap({ 
-				address: 'New York, USA',
-				zoom: 14,
-				markers: [
-					{'address' : 'Grand St, New York'}
-				]
+
 			});  
 		}
 

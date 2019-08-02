@@ -1,0 +1,6 @@
+﻿//page log 
+
+function postlog(){
+	 
+
+}

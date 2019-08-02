@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="shortcut ico" href="/favicon.ico?" type="image/x-icon">
-	<title>M.XTech美襄科技(上海) | Home</title>
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 	
 	
 	<!-- 1140px Grid styles for IE -->
@@ -18,6 +18,9 @@
 	<link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="/css/style.css" media="screen" />
 	<link rel="stylesheet" href="/sliders/flexslider/flexslider.css" />
+	
+	<!-- jquery -->
+	<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
 	
 	<!-- HTML5 Shiv + detect touch events -->
 	<script type="text/javascript" src="/js/modernizr.custom.js"></script>
@@ -31,6 +34,8 @@
 	<!--dynamicloadjs-->
 	<script type="text/javascript" src="/js/dynamicloadjs.js"></script>
 	  
+	<!--log--> 
+	 <script type="text/javascript" src="/js/log.js"></script>
 	 
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="/css/font-awesome.css" />
@@ -43,10 +48,14 @@
 	
 	<!-- subscribe -->
 	<link href="/css/subscribe.css" rel='stylesheet' type='text/css' />
+
+	
 </head>
 <body class="h-style-1 text-1">
-	
 <!-- - - - - - - - - - - - - - Top Panel - - - - - - - - - - - - - - - - -->	
+
+
+
 
 <div class="top-line clearfix">
 	

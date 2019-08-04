@@ -5,7 +5,7 @@ permalink: /contact/
 categories: Contact
 type: page
 ---
-
+    
 	<!-- - - - - - - - - - - - - - Main - - - - - - - - - - - - - - - - -->		
 		
 	<section class="main sbr clearfix">		
@@ -62,7 +62,7 @@ type: page
 
 					<h6>Contact Form</h6>
 
-					<form method="post" action="" class="contact-form" id="contactform" />
+					<form  class="contact-form" id="contactform" />
 
 						<p class="input-block">
 							<label for="name">Your Name <span class="required tcolor">(required)</span></label>
@@ -91,10 +91,11 @@ type: page
 
 						
 						<p class="input-block">
-							<label for="verify">Are you human?</label>
-							<iframe src="php/capcha_page.php" height="38" width="80" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" class="capcha_image_frame" name="capcha_image_frame"></iframe>
-							<input class="verify" type="text" id="verify" name="verify" />
-							<button class="button orange bcolor" type="submit" id="submit">Submit</button>
+						<label for="verify">Are you human?</label>
+							<div style="width:20%" id="v_container" src="php/capcha_page.php" height="38" width="80" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" class="capcha_image_frame" name="capcha_image_frame"></div>
+							<input class="verify" type="text" id="code_input" name="verify" />
+							<div  id="submit" class="button orange bcolor">Submit</div>
+							
 						</p>
 						
 					</form><!--/ .contact-form-->			   
@@ -102,6 +103,35 @@ type: page
 				</div><!--/ #contact-->	
 
 			</section><!--/ #content-->
+			
+			 <script src="/js/gVerify.js"></script>
+             <script type="text/javascript">
+				var verifyCode = new GVerify("v_container");
+
+				document.getElementById("submit").onclick = function(){
+					var res = verifyCode.validate(document.getElementById("code_input").value);
+					if(res){
+						//console.log('validate code success');
+						swal(
+						  'Thank You!',
+						  '感谢您的反馈',
+						  'success'
+						)
+	                   setTimeout(function () {
+							location.reload();
+						 },
+						 2000);
+					}else{
+						//alert("验证码错误!");
+					    sweetAlert(
+						  'Oops...',
+						  '验证码错误!',
+						  'error'
+						)
+					
+					}
+				}
+			</script>
 
 			<!-- - - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - - -->	
 

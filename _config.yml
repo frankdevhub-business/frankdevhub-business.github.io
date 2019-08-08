@@ -1,11 +1,13 @@
 # Site settings
-title: 上海美襄信息科技有限公司
+title: 上海美襄科技有限公司
 baseurl: "" 
 
 # other links
 github_username:  frankdevhub
 email: frankdevhub@gmailcom
 
+#server_ip
+server_ip: 39.98.246.50
 
 # Build settings
 markdown: kramdown

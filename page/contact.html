@@ -92,7 +92,7 @@ type: page
 						
 						<p class="input-block">
 						<label for="verify">Are you human?</label>
-							<div style="width:20%" id="v_container" src="php/capcha_page.php" height="38" width="80" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" class="capcha_image_frame" name="capcha_image_frame"></div>
+							<div style="width:20%" id="v_container" src="/php/capcha_page.php" height="38" width="80" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" class="capcha_image_frame" name="capcha_image_frame"></div>
 							<input class="verify" type="text" id="code_input" name="verify" />
 							<div  id="submit" class="button orange bcolor">Submit</div>
 							
@@ -106,9 +106,61 @@ type: page
 			
 			 <script src="/js/gVerify.js"></script>
              <script type="text/javascript">
+			    //$("#confirm").attr("checked",true);
 				var verifyCode = new GVerify("v_container");
-
-				document.getElementById("submit").onclick = function(){
+                var check = true;
+				var e_check = false;
+				   document.getElementById("submit").onclick = function(){
+				   if(!check)
+				   {
+						$("#name").removeAttr("style","");
+						$("#email").removeAttr("style","");
+						$("#message").removeAttr("style","");
+				   }
+				      //check username
+				      var username = $("#name").val();
+				      if(username == "")
+					  {
+				        $("#name").css('border','1px solid rgb(234, 17, 17)');
+					    check = false;
+					  }
+					  //check email
+					  var email = $("#email").val();
+				      if(email == "")
+					  {
+				       $("#email").css('border','1px solid rgb(234, 17, 17)');
+					   check = false;
+					  }else{
+						var reg = new RegExp(/^\S+@\S+\.\S{2,}$/);
+						if(!reg.test(email)) 
+						{
+						   alert("请输入正确的邮件地址!");
+						   $("#email").css('border','1px solid rgb(234, 17, 17)');
+						   check = false;
+						   e_check = false;
+						}else{
+						   e_check = true;
+						 }
+					  }
+	
+					  //check message information
+					  var message = $("#message").val();
+				      if(message == "")
+					  {
+				       $("#message").css('border','1px solid rgb(234, 17, 17)');
+					   check = false;
+					  }
+					  //check if checkbox selected
+					  var select = $("input[type='checkbox']").is(':checked');
+					  console.log(select);
+					  if(e_check==true && select==false) 
+					  {
+					     alert("请阅读并同意相关政策协议!");
+     					 check =false;
+	   				  }
+					
+				    if(!check)
+					  return;
 					var res = verifyCode.validate(document.getElementById("code_input").value);
 					if(res){
 						//console.log('validate code success');
@@ -130,6 +182,8 @@ type: page
 						)
 					
 					}
+			
+				
 				}
 			</script>
 

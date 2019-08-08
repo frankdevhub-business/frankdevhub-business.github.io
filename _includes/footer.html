@@ -1,4 +1,27 @@
 <!-- - - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->	
+<script type="text/javascript">
+//page log 
+(function postlog(){
+  $.ajax(
+    {
+	    type:"post",
+        url:"http://{{site.server_ip}}:8090/web/home/page/log",
+        contentType: "application/json",
+		data:JSON.stringify({
+			"url":"{{ page.url }}"
+		}),
+  
+        success: function(data) {
+           console.log(data);
+        },
+        error: function (data){
+           console.log(data);
+        }
+
+    });
+}());
+</script>
+
 
 <div class="cndns-right">
     <div class="cndns-right-meau meau-sev">

@@ -2,23 +2,6 @@
 layout: default
 ---
 
-<script type="text/javascript">
- var page_url = "{{ page.url }}"
-  console.log('page log:',page_url);
-  $.ajax({
-            type: "POST",
-            url: "http://localhost:8090/web/home/page/log",
-            contentType: "application/json", 
-            dataType: "json",
-            data: JSON.stringify({ 'url': page_url }), 
-            success: function (res) {
-                console.log(res);
-            }
-        });
-
-</script>
-
-
 <!-- - - - - - - - - - - - - Slider - - - - - - - - - - - - - - - -->	
 	<div class="slider">
 		

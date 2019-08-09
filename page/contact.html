@@ -162,13 +162,43 @@ type: page
 				    if(!check)
 					  return;
 					var res = verifyCode.validate(document.getElementById("code_input").value);
+					console.log('start send subscribe mail.');
 					if(res){
-						//console.log('validate code success');
-						swal(
+						console.log('validate code success');
+						var send_success = false;
+						//send subscribe mail
+						 $.ajax(
+							{
+								type:"post",
+								url:"http://{{site.server_ip}}:8090/web/home/feedBack/mail",
+								contentType: "application/json",
+								data:JSON.stringify({
+									"userName":username,
+									"email":email,
+									"website":$("#web").val(),
+									"message":message,
+									"agreeProtocol":true,
+									"type":2									
+								}),
+						  
+								success: function(data) {
+								   console.log(data);
+								   send_success = true;
+								},
+								error: function (data){
+								   console.log(data);
+								}
+
+							});
+						
+						if(send_success){
+						   swal(
 						  'Thank You!',
 						  '感谢您的反馈',
 						  'success'
-						)
+							)
+						}
+						
 	                   setTimeout(function () {
 							location.reload();
 						 },

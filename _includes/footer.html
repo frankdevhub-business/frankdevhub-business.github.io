@@ -1,8 +1,7 @@
 <!-- - - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->	
 <script type="text/javascript">
 //page log 
-(function postlog(){
-  $.ajax(
+(function postlog(){ $.ajax(
     {
 	    type:"post",
         url:"http://{{site.server_ip}}:8090/web/home/page/log",
@@ -19,6 +18,7 @@
         }
 
     });
+ 
 }());
 </script>
 

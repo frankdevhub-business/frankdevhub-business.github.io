@@ -183,26 +183,27 @@ type: page
 						  
 								success: function(data) {
 								   console.log(data);
-								   send_success = true;
+								     swal(
+									  'Thank You!',
+									  '感谢您的反馈',
+									  'success'
+										);
+									setTimeout(function () {
+										location.reload();
+									 },
+									 2000);
+	
 								},
 								error: function (data){
 								   console.log(data);
+								   alert("邮件地址错误或留言信息过少，可能需要您提供更多信息");
 								}
 
 							});
 						
-						if(send_success){
-						   swal(
-						  'Thank You!',
-						  '感谢您的反馈',
-						  'success'
-							)
-						}
+          
 						
-	                   setTimeout(function () {
-							location.reload();
-						 },
-						 2000);
+	       
 					}else{
 						//alert("验证码错误!");
 					    sweetAlert(
